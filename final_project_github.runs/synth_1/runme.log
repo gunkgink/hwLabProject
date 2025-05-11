@@ -1,0 +1,393 @@
+
+*** Running vivado
+    with args -log top_module.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
+
+
+
+****** Vivado v2024.2.1 (64-bit)
+  **** SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
+  **** IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
+  **** SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
+  **** Start of session at: Sun May 11 19:02:06 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top_module.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 620.438 ; gain = 192.227
+Command: synth_design -top top_module -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20444
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1286.504 ; gain = 466.254
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_module' [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/top_module.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [V:/Project/final_project_github/hwLabProject/final_project_github.runs/synth_1/.Xil/Vivado-15920-LAPTOP-K9BGQJ58/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [V:/Project/final_project_github/hwLabProject/final_project_github.runs/synth_1/.Xil/Vivado-15920-LAPTOP-K9BGQJ58/realtime/clk_wiz_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'reset' of module 'clk_wiz_0' is unconnected for instance 'clk_gen' [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/top_module.v:20]
+WARNING: [Synth 8-7071] port 'locked' of module 'clk_wiz_0' is unconnected for instance 'clk_gen' [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/top_module.v:20]
+WARNING: [Synth 8-7023] instance 'clk_gen' of module 'clk_wiz_0' has 4 connections declared, but only 2 given [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/top_module.v:20]
+INFO: [Synth 8-6157] synthesizing module 'sd_controller' [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/sd_controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'spi_master' [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/spi_master.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/spi_master.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'spi_master' (0#1) [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/spi_master.v:1]
+WARNING: [Synth 8-6104] Input port 'spi_data_out' has an internal driver [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/sd_controller.v:28]
+WARNING: [Synth 8-6104] Input port 'spi_done' has an internal driver [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/sd_controller.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'sd_controller' (0#1) [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/sd_controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'frame_buffer' [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/frame_buffer.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'frame_buffer' (0#1) [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/frame_buffer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/vga_controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/vga_controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/debouncer.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (0#1) [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/debouncer.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top_module' (0#1) [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/top_module.v:1]
+WARNING: [Synth 8-6014] Unused sequential element response_reg was removed.  [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/sd_controller.v:110]
+WARNING: [Synth 8-7137] Register cmd_index_reg in module sd_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/sd_controller.v:81]
+WARNING: [Synth 8-7137] Register cmd_number_reg in module sd_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/sd_controller.v:58]
+WARNING: [Synth 8-7137] Register argument_reg[3] in module sd_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/sd_controller.v:58]
+WARNING: [Synth 8-7137] Register argument_reg[2] in module sd_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/sd_controller.v:58]
+WARNING: [Synth 8-7137] Register argument_reg[1] in module sd_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/sd_controller.v:58]
+WARNING: [Synth 8-7137] Register argument_reg[0] in module sd_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/sd_controller.v:58]
+WARNING: [Synth 8-7137] Register crc_reg in module sd_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/sd_controller.v:58]
+WARNING: [Synth 8-7137] Register data_out_reg in module sd_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [V:/Project/final_project_github/hwLabProject/final_project_github.srcs/sources_1/imports/new/sd_controller.v:205]
+WARNING: [Synth 8-7129] Port block_address[31] in module sd_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port block_address[30] in module sd_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port block_address[29] in module sd_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port block_address[28] in module sd_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port block_address[23] in module sd_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port block_address[22] in module sd_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port block_address[21] in module sd_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port block_address[20] in module sd_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port block_address[15] in module sd_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port block_address[14] in module sd_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port block_address[13] in module sd_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port block_address[12] in module sd_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port block_address[7] in module sd_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port block_address[6] in module sd_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port block_address[5] in module sd_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port block_address[4] in module sd_controller is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1402.113 ; gain = 581.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1402.113 ; gain = 581.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1402.113 ; gain = 581.863
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1402.113 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [v:/Project/final_project_github/hwLabProject/final_project_github.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_gen'
+Finished Parsing XDC File [v:/Project/final_project_github/hwLabProject/final_project_github.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_gen'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1496.438 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1496.438 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1496.438 ; gain = 676.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1496.438 ; gain = 676.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  v:/Project/final_project_github/hwLabProject/final_project_github.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  v:/Project/final_project_github/hwLabProject/final_project_github.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for clk_gen. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1496.438 ; gain = 676.188
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'spi_master'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+                TRANSFER |                              010 |                               01
+                    DONE |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'spi_master'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1496.438 ; gain = 676.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   20 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               10 Bit    Registers := 4     
+	                8 Bit    Registers := 7     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---RAMs : 
+	             600K Bit	(76800 X 8 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   20 Bit        Muxes := 1     
+	   7 Input   17 Bit        Muxes := 1     
+	   7 Input   10 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 1     
+	   7 Input    8 Bit        Muxes := 2     
+	   7 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
+	   3 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 21    
+	   7 Input    4 Bit        Muxes := 4     
+	   7 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 9     
+	   3 Input    1 Bit        Muxes := 5     
+	   7 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP vga/pixel_addr, operation Mode is: C'+A2*(B:0x140).
+DSP Report: register vga/v_count_reg is absorbed into DSP vga/pixel_addr.
+DSP Report: register vga/h_count_reg is absorbed into DSP vga/pixel_addr.
+DSP Report: operator vga/pixel_addr is absorbed into DSP vga/pixel_addr.
+DSP Report: operator vga/pixel_addr0 is absorbed into DSP vga/pixel_addr.
+WARNING: [Synth 8-3917] design top_module has port rgb[8] driven by constant 0
+WARNING: [Synth 8-3917] design top_module has port rgb[4] driven by constant 0
+WARNING: [Synth 8-3917] design top_module has port rgb[1] driven by constant 0
+WARNING: [Synth 8-3917] design top_module has port rgb[0] driven by constant 0
+WARNING: [Synth 8-3332] Sequential element (fb/mem_reg_mux_sel_a_pos_1) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (fb/mem_reg_mux_sel_a_pos_1__0) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (fb/mem_reg_mux_sel_a_pos_1__1) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (fb/mem_reg_mux_sel_a_pos_1__2) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (fb/mem_reg_mux_sel_a_pos_1__3) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (fb/mem_reg_mux_sel_a_pos_1__4) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (fb/mem_reg_mux_sel_a_pos_1__5) is unused and will be removed from module top_module.
+WARNING: [Synth 8-3332] Sequential element (fb/mem_reg_mux_sel_a_pos_1__6) is unused and will be removed from module top_module.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1496.438 ; gain = 676.188
+---------------------------------------------------------------------------------
+ Sort Area is  vga/pixel_addr_0 : 0 0 : 182 182 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top_module  | fb/mem_reg | 75 K x 8(READ_FIRST)   | W |   | 75 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 24     | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++---------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|vga_controller | C'+A2*(B:0x140) | 10     | 9      | 10     | -      | 17     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
++---------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1643.824 ; gain = 823.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1645.738 ; gain = 825.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top_module  | fb/mem_reg | 75 K x 8(READ_FIRST)   | W |   | 75 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 24     | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_0__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_1__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_2__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_3__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_4__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_5__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_6__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance fb/mem_reg_1_7__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1674.383 ; gain = 854.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module clk_gen has unconnected pin reset
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1871.547 ; gain = 1051.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1871.547 ; gain = 1051.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1871.547 ; gain = 1051.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1871.547 ; gain = 1051.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1872.516 ; gain = 1052.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1872.516 ; gain = 1052.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|vga_controller | C'+A'*B     | 9      | 9      | 9      | -      | 17     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |clk_wiz  |     1|
+|2     |DSP48E1  |     1|
+|3     |LUT1     |     4|
+|4     |LUT2     |    27|
+|5     |LUT3     |    17|
+|6     |LUT4     |    30|
+|7     |LUT5     |    36|
+|8     |LUT6     |    64|
+|9     |RAMB36E1 |    24|
+|12    |FDCE     |    32|
+|13    |FDPE     |     2|
+|14    |FDRE     |    64|
+|15    |FDSE     |     8|
+|16    |IBUF     |     3|
+|17    |OBUF     |    17|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1872.516 ; gain = 1052.266
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:54 . Memory (MB): peak = 1872.516 ; gain = 957.941
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1872.516 ; gain = 1052.266
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1872.516 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 25 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1872.762 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 30ee9bd8
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 43 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 1872.762 ; gain = 1237.395
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1872.762 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'V:/Project/final_project_github/hwLabProject/final_project_github.runs/synth_1/top_module.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun May 11 19:03:36 2025...
